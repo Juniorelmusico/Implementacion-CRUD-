@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 """django_crud_api URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
+=======
+"""
+URL configuration for django_crud_api project.
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/5.1/topics/http/urls/
+>>>>>>> origin/master
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -14,6 +22,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+<<<<<<< HEAD
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
@@ -26,3 +35,11 @@ urlpatterns = [
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+=======
+from django.urls import include, path
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('tasks/', include('task.urls')),
+]
+>>>>>>> origin/master
